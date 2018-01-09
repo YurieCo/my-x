@@ -1,0 +1,8 @@
+<h2>
+    <ul class="heroes">
+      <li *ngFor="let hiremanager of hiremanagers" (click)="onSelect(hiremanager)">
+          <span class="badge">{{hiremanager.id}}</span> {{hiremanager.name}} {{hiremanager.company}}
+      </li>
+    </ul>
+</h2>
+
