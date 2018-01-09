@@ -1,18 +1,19 @@
-<h2>My Heroes</h2>
-<ul class="hiremanager">
-  <li *ngFor="let hiremanager of hiremanagers" (click)="onSelect(hiremanager)">>
-    <span class="badge">{{hiremanager.id}}</span> {{hiremanager.name}}
-  </li>
-</ul>
-
-<div *ngIf="selectHR">
-
-  <h2>{{ selectHR.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{selectHR.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectHR.name" placeholder="name">
-    </label>
-  </div>
-
-</div>
+    <h2>The dearest hire managers</h2>
+    <ul class="hiremanager">
+      <li *ngFor="let hiremanager of hiremanagers"
+        [class.selected]="hiremanager === selectedHiremanager"
+        (click)="onSelect(hiremanager)">
+        <span class="badge">{{hiremanager.id}}</span> {{hiremanager.name}}
+      </li>
+    </ul>
+     
+    <div *ngIf="selectedHiremanager">
+     
+      <h2>{{ selectedHiremanager.name | uppercase }} Details</h2>
+      <div><span>id: </span>{{selectedHiremanager.id}}</div>
+      <div>
+        <label>name:
+          <input [(ngModel)]="selectedHiremanager.name" placeholder="name">
+        </label>
+      </div>
+    </div>

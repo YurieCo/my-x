@@ -10,12 +10,12 @@ import { MOCKS } from '../mocks/mock-hiremanagers';
 
 export class HiremanagerComponent implements OnInit {
   hiremanagers = MOCKS;
-  selectHR: Hiremanager;
+  selectedHiremanager: Hiremanager;
   constructor() { }
   ngOnInit() {
   }
   onSelect(hiremanager: Hiremanager): void {
-  this.selectHR = hiremanager;
+  this.selectedHiremanager = hiremanager;
  }
 }
 
