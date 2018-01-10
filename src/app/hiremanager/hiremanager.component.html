@@ -1,4 +1,10 @@
     <h2>The dearest hire managers</h2>
+    
+    <select ng-model="$ctrl.orderentities">
+      <option value="name">Alphabetical</option>
+      <option value="level">level</option>
+    </select>    
+    
     <ul class="hiremanager">
       <li *ngFor="let hiremanager of hiremanagers"
         [class.selected]="hiremanager === selectedHiremanager"
